@@ -17,6 +17,8 @@ for i, img in enumerate(imgs):
     plt.axis("off")
     plt.title(f"Image {i+1}")
 
+    
+
     # Hiển thị histogram
     plt.subplot(2, 2, 2*i + 2)
     plt.plot(hist, color='black')
