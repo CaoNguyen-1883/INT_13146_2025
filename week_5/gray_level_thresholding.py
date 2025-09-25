@@ -26,9 +26,15 @@ if __name__ == "__main__":
     plt.title("Original image")
     plt.axis("off")
 
+    newImg = threshold(image, T, isReverse)
     plt.subplot(2, 2, 2)
-    plt.imshow(threshold(image, T, isReverse), cmap="gray")
+    plt.imshow(newImg, cmap="gray")
     plt.title(f"Thresholding = {T}")
+    plt.axis("off")
+
+    plt.subplot(2, 2, 3)
+    plt.imshow(newImg*image, cmap="gray")
+    plt.title(f"f(x).m(x)")
     plt.axis("off")
 
     plt.tight_layout()
